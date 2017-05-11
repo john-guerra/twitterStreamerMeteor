@@ -1,8 +1,10 @@
 {
   "name": "twitterStreamerMeteor",
   "private": true,
+  "main": ".electron-starter.js",
   "scripts": {
-    "start": "meteor run"
+    "start": "meteor run",
+    "electron": "electron ."
   },
   "dependencies": {
     "babel-runtime": "^6.20.0",
@@ -12,5 +14,8 @@
     "react-addons-pure-render-mixin": "^15.5.2",
     "react-dom": "^15.5.4",
     "twitter": "^1.7.0"
+  },
+  "devDependencies": {
+    "electron": "^1.6.7"
   }
 }
