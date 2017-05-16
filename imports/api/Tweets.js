@@ -36,10 +36,10 @@ if (Meteor.isServer) {
         // Remove all the tweets
         Tweets.remove({});
       }
-
-      stream = client.stream("statuses/filter", {track: query});
+      // Colombia
+      let locations = "-79.12,-4.23,-66.85,12.59";
+      stream = client.stream("statuses/filter", {track: query, locations:locations});
       stream.on("data", Meteor.bindEnvironment(function(tweet) {
-        // console.log(tweet.text);
         // resolve(tweet);
         Tweets.insert(tweet);
       }));
